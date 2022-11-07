@@ -1,0 +1,18 @@
+The schema for the type 1 in the database will be
+•	First Name (type: string, required: true)
+•	Last Name (type: string, required: true)
+•	Email (type: string, required: true)
+•	Password (type: string, required: true)
+•	User Type (type: number, required: true)
+•	Phone (type: number)
+•	Vehicle (type: string)
+The schema for the type 2 in the database will be
+•	First Name (type: string, required: true)
+•	Last Name (type: string, required: true)
+•	Email (type: string, required: true)
+•	Password (type: string, required: true)
+•	User Type (type: number, required: true)
+•	Phone (type: number, required: true)
+•	Business Address (type: string, required: true)
+•	Category (type: string, required: true)
+•	Bio (type: string, required: true)
