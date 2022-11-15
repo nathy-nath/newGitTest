@@ -1,0 +1,21 @@
+// Shoelace
+
+// sl-dialog
+sl-dialog::part(title){
+  font-weight: 500;
+  font-size: 1.6em;
+}
+
+
+
+
+// RESPONSIVE - MOBILE -------------------
+@media all and (max-width: 768px){ 
+
+  sl-dialog::part(panel) {
+    width: 80%;
+    height: 75%;
+    max-height: none;
+    max-width: none;
+  }
+}

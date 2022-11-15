@@ -1,0 +1,75 @@
+Exercise 8a
+
+1. When a user signs in for thw fist time,they are redirected to the guide page, else they are redirected to the homepage.
+
+Backend: 
+----------------------------------------------------------------
+
+1. models/User.js - add field "newUser" - boolean, default = true
+2. routes/User.js - update user (PUT) line 54, set to req.bidy (not indiv fields)
+3. MongoDB Compass _ update all users, add newUser field, set to true.
+
+FrontENd:
+----------------------------------------------------------------
+
+1.src/Auth.js -> Auth.signin method
+-check if user.firstSignin == true
+    -true = redirect to guide page
+    -false = redirect to home page
+
+2. src/views/pages/guide.js
+- once paage is rendered, set update current user.newUser = false (so not directed to guide page)
+- add method updateCurrentUser() - uses userAPI.updateUser() to set newUser = false 
+3. src/UserAPI .updateUser method
+- allow two kinds of fetch(), one for formData data type requests and one for JSON data type requests
+
+4. Test
+
+Exercise 8b
+
+Backend:
+----------------------------------------------------------------
+
+1. Mongo DB Compass - create collections haircuts
+
+2. Mongo DB Compass - imports haircuts-collection, json into haircuts collexction
+
+3. unzip haircuts-images and move into public/images folder
+
+4. create new Hairdresser user = 
+    Sally Perm
+    sally@curtin.edu.au
+    Sally1234
+    Hairdresser
+
+    - upload avatar (sally-perm-avatar.jpg)
+
+5. update all haircuts user field to Sally Perm's id
+
+6. create haircuts model - model/Haircuts.js
+    - name
+    - description
+    - price
+    - user (author = hairdresser)
+    - image
+    - gender (m,f,u)
+    - length (s,m,l)
+
+    (PASTE 1)
+
+    7. create haircut route to get all haircuts - routes/haircuts.js
+
+    (PASTE 2)
+
+    8. server.js - add /haircut route
+
+    FRONTEND:
+
+    1. create Haircut API.js
+        - HaircutsAPI.getHaircuts() - (PASTE 3)
+
+    2. views/pages/haircuts.js 
+        - import HaircutsAPI module
+        - init() create variable this.haircuts = null 
+        - add method getHaircuts() - (PASTE 4)
+        - render() - loop through this.haircuts and render <div> with details  
