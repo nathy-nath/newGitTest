@@ -30,7 +30,7 @@ class HomeView {
           <h3>What would you like to do today?</h3>
           <sl-button class="anim-in" @click=${() => gotoRoute('/profile')}>View Profile</sl-button>
           <p>&nbsp;</p>
-          <sl-button class="anim-in" @click=${() => gotoRoute('/categories')}>Explore...</sl-button>
+          <sl-button class="anim-in" @click=${() => gotoRoute('/services')}>Explore...</sl-button>
           
         </div>
       

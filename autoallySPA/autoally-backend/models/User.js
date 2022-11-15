@@ -37,22 +37,18 @@ const userSchema = new mongoose.Schema({
   },
   phone: {
     type: String
-    //required: true
   },
   vehicle: {
     type: String
   },
   businessName: {
     type: String,
-    //required: true
   },
   address: {
     type: String,
-    //required: true
   },
   about: {
     type: String,
-    //required: true 
   },
   favouriteServices: [
     { type: Schema.ObjectId, ref: 'Service' }
